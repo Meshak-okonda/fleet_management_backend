@@ -1,0 +1,42 @@
+const mongooseElementsVerif = require('mongoose');
+
+const VehicleVerificationSchema = new mongooseElementsVerif.Schema({
+	idVehicle: { type: String, required: true },
+	honk: { type: Object, required: true },
+	motor: { type: Object, required: true },
+	stopLight: { type: Object, required: true },
+	startUp: { type: Object, required: true },
+	handBrake: { type: Object, required: true },
+	stricken: { type: Object, required: true },
+	siegeState: { type: Object, required: true },
+	ceilingState: { type: Object, required: true },
+	windshieldConditionAV: { type: Object, required: true },
+	windshieldConditionAR: { type: Object, required: true },
+	carStateOut: { type: Object, required: true },
+	carStateIn: { type: Object, required: true },
+	shockAbsorbersAV: { type: Object, required: true },
+	shockAbsorbersAR: { type: Object, required: true },
+	brakingSystem: { type: Object, required: true },
+	radioAndReader: { type: Object, required: true },
+	reserveTire: { type: Object, required: true },
+	leftAndRightTireAV: { type: Object, required: true },
+	leftAndRightTireAR: { type: Object, required: true },
+	gironfardOperation: { type: Object, required: true },
+	flashingOperationAV: { type: Object, required: true },
+	flashingOperationAR: { type: Object, required: true },
+	warningLightsOperation: { type: Object, required: true },
+	windshieldWipers: { type: Object, required: true },
+	mechanismOperation: { type: Object, required: true },
+	cric: { type: Object, required: true },
+	wheelWrench: { type: Object, required: true },
+	cricRemover: { type: Object, required: true },
+	mileage: { type: String, required: true },
+	dateVerification: { type: String, required: true },
+	stateVehicle: { type: Object, required: true },
+	createdAt: { type: Date, default: Date() },
+	delete: { type: Boolean, default: false },
+});
+module.exports = mongooseElementsVerif.model(
+	'elementsVerification',
+	VehicleVerificationSchema
+);

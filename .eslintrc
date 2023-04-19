@@ -1,0 +1,25 @@
+{
+	"env": {
+		"node": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"semi": "warn",
+		"no-restricted-syntax": [
+			"error",
+			{
+				"selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+				"message": "Vous devez enlever tout code faisant appel à console.log"
+			}
+		],
+		"no-empty": 0,
+		"no-trailing-whitespace": 0
+	}
+}

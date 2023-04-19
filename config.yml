@@ -1,0 +1,17 @@
+spectaql:
+  logoFile: ''
+
+introspection:
+  url: 'http://localhost:6500/graphql'
+  headers:
+    Authorization: ''
+
+info:
+  title: 'Documentation of Fleet Management Soft'
+  description: ''
+
+servers:
+  - url: 'http://localhost:6500/graphql'
+    description: Production
+    production: true
+# for have new documentation run : npx spectaql config.yml

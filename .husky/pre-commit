@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '💫🌱🌱Test de conformité et formatage du code avant le commit 💫🌱🌱'
+
+# Check Prettier and Eslint standards
+npm run format ||
+(
+    echo '⛔Une erreur a été trouver veuillez verifier le code et refaite la commande.
+          Prettier a crashé. Faite npm run format, ajouter des changement et refaite le commit.'
+          false;
+)
+
+
+#If it builds we can commit
+echo '💚💚💚💚💚Vous avez reussi à passer tout le test💚💚💚💚'

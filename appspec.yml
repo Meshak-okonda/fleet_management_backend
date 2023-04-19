@@ -1,0 +1,28 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/fleet-management/services/main
+permissions:
+  - object: /home/ubuntu/fleet-management/services
+    pattern: 'main'
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+    type:
+      - directory
+file_exists_behavior: OVERWRITE
+
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 3000
+      runas: ubuntu
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 3000
+      runas: ubuntu
+  ValidateService:
+    - location: scripts/validate_service.sh
+      timeout: 600
+      runas: ubuntu

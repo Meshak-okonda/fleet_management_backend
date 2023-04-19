@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "target": "es6",
+    "types": ["node"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": false,
+    "strict": false,
+    "isolatedModules": false,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "importsNotUsedAsValues": "error",
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "./src"
+  ]
+}
